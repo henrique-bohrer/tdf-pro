@@ -1,100 +1,102 @@
-TDF Pro - Landing Page para Mentoria de Futebol
-Projeto de uma landing page moderna e totalmente responsiva para a "TDF Pro", uma mentoria focada em atletas de base de futebol. O site foi desenvolvido para apresentar o programa, destacar seus benefícios e facilitar o contato direto via WhatsApp.
+# TDF Pro – Landing Page para Mentoria de Futebol
 
+Landing page moderna, responsiva e com foco em conversão para a **TDF Pro**, uma mentoria especializada no desenvolvimento de jovens atletas de futebol. O projeto apresenta os pilares do programa, resultados, depoimentos e facilita o contato direto via WhatsApp.
 
-Substitua a imagem acima por um print da sua página.
+> **📸 Substitua esta imagem por um print da página finalizada.**
 
-💻 Sobre o Projeto
-A landing page TDF Pro foi criada como um canal de marketing digital para o programa de mentoria de futebol. O objetivo é apresentar de forma clara e atrativa os quatro pilares do programa (Técnico, Tático, Físico e Mental), exibir resultados de atletas, depoimentos de clientes e informações sobre valores, centralizando a chamada para ação (CTA) em um botão de contato via WhatsApp.
+---
 
-O design foi pensado para ser energético e profissional, utilizando um tema escuro com detalhes em amarelo vibrante, alinhado à identidade visual da marca.
+## 💻 Sobre o Projeto
 
-✨ Funcionalidades Principais
-Totalmente Responsivo: Design adaptável para uma experiência de usuário perfeita em desktops, tablets e smartphones.
+A landing page **TDF Pro** foi desenvolvida como uma ferramenta estratégica de marketing digital para promover o programa de mentoria voltado à formação de atletas de base. Seu objetivo principal é destacar, de forma clara e visualmente atrativa, os quatro pilares da metodologia: **Técnico**, **Tático**, **Físico** e **Mental**.
 
-Navegação Fixa e Moderna: Barra de navegação fixa no topo com fundo escuro e efeito de desfoque.
+Com um design energético e profissional, o layout adota um tema escuro com detalhes em amarelo vibrante, alinhado à identidade visual da marca. A estrutura da página visa guiar o usuário até a ação desejada: o contato direto via WhatsApp.
 
-Seções Informativas:
+---
 
-Sobre a Mentoria: Detalhes sobre os 4 pilares do programa.
+## ✨ Funcionalidades
 
-Resultados: Provas sociais e exemplos de sucesso.
+* **Design Responsivo**: Adaptado para todos os tamanhos de tela (desktop, tablet e mobile).
+* **Navegação Fixa**: Barra de menu no topo com efeito de desfoque e rolagem suave.
+* **Seções Informativas:**
 
-Feedbacks: Depoimentos de atletas e responsáveis.
+  * **Sobre a Mentoria**: Explicação dos 4 pilares do programa.
+  * **Resultados**: Exemplos reais de atletas impactados.
+  * **Depoimentos**: Feedbacks de atletas e familiares.
+  * **Valores**: Informações transparentes sobre planos e investimento.
+* **Animações Dinâmicas**: Efeitos de *fade-in* ativados durante a rolagem.
+* **Interações Visuais**: Efeitos de *hover* em botões e cards.
+* **CTA Estratégico**: Botões de ação que redirecionam diretamente para o WhatsApp.
 
-Valores: Apresentação clara do plano de investimento.
+---
 
-Animações de Entrada: Efeitos sutis de fade-in que são ativados conforme o usuário rola a página, tornando a experiência mais dinâmica.
+## 🚀 Tecnologias Utilizadas
 
-Efeitos de Hover: Interações visuais nos cards e botões para fornecer feedback ao usuário.
+* **HTML5** – Estrutura semântica e bem organizada.
+* **CSS3** – Estilização personalizada e animações via `@keyframes`.
+* **Tailwind CSS** – Framework CSS utility-first para construção rápida e responsiva.
+* **JavaScript (Vanilla)** – Interatividade e animações de rolagem.
+* **Feather Icons** – Ícones leves e vetoriais.
+* **Google Fonts** – Tipografia moderna com a fonte *Inter*.
 
-Contato Direto: Botões de "Call to Action" (CTA) estrategicamente posicionados para iniciar uma conversa no WhatsApp com um clique.
+---
 
-🚀 Tecnologias Utilizadas
-Este projeto foi construído utilizando tecnologias web modernas e focadas em performance e simplicidade.
+## ⚙️ Como Executar Localmente
 
-HTML5: Para a estrutura semântica do conteúdo.
+1. Clone o repositório:
 
-CSS3: Para estilizações personalizadas e animações (@keyframes).
+   ```bash
+   git clone https://github.com/henrique-bohrer/tdf-pro.git
+   ```
 
-Tailwind CSS: Framework CSS utility-first para a criação rápida de interfaces modernas e responsivas diretamente no HTML.
+2. Acesse o diretório do projeto:
 
-JavaScript (Vanilla): Para adicionar interatividade, como as animações de scroll e a atualização dinâmica de elementos.
+   ```bash
+   cd tdf-pro
+   ```
 
-Feather Icons: Biblioteca de ícones SVG, leves e de alta qualidade.
+3. Abra o arquivo `index.html` no navegador de sua preferência.
 
-Google Fonts: Para o uso da família de fontes "Inter", garantindo uma tipografia limpa e profissional.
+---
 
-⚙️ Como Executar o Projeto Localmente
-Por ser um projeto estático (sem dependências de back-end), é muito simples executá-lo.
+## 🔧 Personalização
 
-Clone o repositório:
+* **Número do WhatsApp**
+  Localize no arquivo `index.html` a string `55SEUNUMERO` e substitua pelo número desejado no formato internacional.
+  Exemplo: `https://wa.me/5541998765432`
 
-git clone https://github.com/henrique-bohrer/tdf-pro.git
+* **Textos e Imagens**
 
-Navegue até a pasta do projeto:
+  * Os textos podem ser editados diretamente no HTML.
+  * Substitua as imagens de placeholder (`https://placehold.co/...`) pelas suas imagens reais.
+  * Recomenda-se o uso de serviços como Imgur ou o próprio repositório para hospedar imagens.
 
-cd tdf-pro
+---
 
-Abra o arquivo index.html:
-Basta abrir o arquivo index.html diretamente no seu navegador de preferência (Google Chrome, Firefox, etc.).
+## 🌐 Deploy
 
-🔧 Personalização
-Para adaptar o site para o seu uso, siga os passos abaixo:
+Este projeto pode ser facilmente publicado em serviços gratuitos de hospedagem estática:
 
-Número do WhatsApp:
+* [Vercel](https://vercel.com/)
+* [Netlify](https://www.netlify.com/)
+* [GitHub Pages](https://pages.github.com/)
 
-No arquivo index.html, procure por 55SEUNUMERO.
+O processo envolve conectar sua conta GitHub e selecionar o repositório. O deploy é automático após cada push.
 
-Substitua todas as ocorrências pelo seu número de WhatsApp no formato 55 (código do país) + DDD + número.
+---
 
-Exemplo: https://wa.me/5541998765432
+## 👨‍💻 Autor
 
-Textos e Imagens:
+Desenvolvido por **Henrique Bohrer**
 
-Todo o conteúdo textual pode ser editado diretamente no arquivo index.html.
+* GitHub: [@henrique-bohrer](https://github.com/henrique-bohrer)
+* LinkedIn: [Henrique Bressiani Bohrer](https://www.linkedin.com/in/henrique-bohrer)
+* Email: [henrique300415@gmail.com](mailto:henrique300415@gmail.com)
 
-As imagens de placeholder (https://placehold.co/...) devem ser substituídas pelas suas próprias imagens. É recomendado hospedá-las em um serviço como Imgur ou no próprio repositório.
+---
 
-🚀 Deploy
-Você pode hospedar este site gratuitamente em diversas plataformas. As mais recomendadas são:
+## 📝 Licença
 
-Vercel
+Este projeto está licenciado sob a **MIT License**. Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
 
-Netlify
-
-GitHub Pages
-
-O processo em todas elas é muito simples, geralmente envolvendo conectar sua conta do GitHub e selecionar o repositório para deploy.
-
-✒️ Autor
-Projeto desenvolvido por Henrique Bohrer.
-
-GitHub: @henrique-bohrer
-
-LinkedIn: Henrique Bressiani Bohrer
-
-Email: henrique300415@gmail.com
-
-📝 Licença
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+---
