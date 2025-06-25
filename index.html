@@ -18,200 +18,151 @@
   <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Nosso arquivo de estilo CSS -->
+  <!-- Link para o arquivo de estilo CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="text-gray-200">
 
-  <!-- CABEÇALHO -->
-  <header id="navbar" class="bg-[#17191A]/80 backdrop-blur-md shadow-lg shadow-black/20 sticky top-0 z-50">
-    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-      <a href="#">
-        <img
-          src="src/images/Logotipo_page-0001.png" style="width: auto; height: 5rem;"
-          alt="Logo TDF Pro" class="h-10">
-      </a>
-      <nav class="hidden md:flex space-x-8">
-        <a href="#sobre" class="text-gray-300 hover:text-yellow-400 transition-colors">A Mentoria</a>
-        <a href="#resultados" class="text-gray-300 hover:text-yellow-400 transition-colors">Resultados</a>
-        <a href="#feedbacks" class="text-gray-300 hover:text-yellow-400 transition-colors">Feedbacks</a>
-        <a href="#valores" class="text-gray-300 hover:text-yellow-400 transition-colors">Valores</a>
-      </nav>
-      <a href="https://wa.me/55SEUNUMERO?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20mentoria%20TDF%20Pro."
-        target="_blank"
-        class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded-full shadow-lg transition-transform transform hover:scale-105 hidden md:flex items-center">
-        <i data-feather="message-circle" class="mr-2 h-5 w-5"></i>
-        Entre em Contato
-      </a>
-    </div>
-  </header>
-
   <!-- SEÇÃO PRINCIPAL (HERO) -->
-  <main class="bg-gradient-dark">
-    <div class="container mx-auto px-6 py-16 sm:py-24 text-center">
-      <div class="max-w-4xl mx-auto">
-        <div class="fade-in">
-          <span class="text-yellow-400 font-semibold uppercase tracking-wider">Trilha do Futebol Apresenta</span>
-          <h2 class="text-4xl md:text-6xl font-extrabold text-white mt-2 leading-tight">
-            Eleve seu futebol ao <span class="text-yellow-400">nível profissional</span> com a Mentoria TDF Pro.
-          </h2>
-        </div>
-        <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto fade-in fade-in-delay-1">
-          A preparação completa para jovens atletas que sonham em se destacar. Orientação técnica, tática, física e
-          mental para você sair na frente.
-        </p>
-        <div class="mt-10 fade-in fade-in-delay-2">
-          <a href="https://wa.me/55SEUNUMERO?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20mentoria%20TDF%20Pro."
-            target="_blank"
-            class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full shadow-xl shadow-yellow-400/20 text-lg transition-transform transform hover:scale-105 inline-flex items-center">
-            <i data-feather="whatsapp" class="mr-3 h-6 w-6"></i>
-            QUERO SABER MAIS
-          </a>
-          <p class="mt-4 text-sm text-gray-500">Vagas limitadas! Garanta sua evolução.</p>
-        </div>
-      </div>
-      <div class="mt-16 max-w-4xl mx-auto fade-in fade-in-delay-3">
+  <main class="bg-gradient-dark py-12 md:py-20">
+    <div class="container mx-auto px-6 text-center">
+      <img
+        src="src/images/Logotipo_page-0001.png" style="width: auto; height: 300px; margin-top: -4rem;"
+        alt="Logo TDF Pro" class="h-16 mx-auto mb-8 fade-in">
+      <h1
+        class="text-3xl md:text-5xl font-extrabold text-white leading-tight max-w-4xl mx-auto fade-in fade-in-delay-1">
+        A única mentoria que prepara atletas de base para o <span class="text-yellow-400">futebol profissional de
+          verdade</span>
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto fade-in fade-in-delay-2">
+        Descubra o caminho para desenvolver suas habilidades técnicas, táticas, físicas e mentais, saindo na frente da
+        concorrência e ficando mais perto do seu sonho.
+      </p>
+
+      <div class="my-10 fade-in fade-in-delay-3">
         <img
           src="https://storage.googleapis.com/maker-studio-project-files-prod/uploaded:image.png-10a38e3f-3ae5-418c-a4ac-671ff69252fd"
           alt="Atleta da TDF Pro em treinamento"
-          class="rounded-2xl shadow-2xl shadow-black/30 mx-auto w-full h-auto object-cover border-4 border-[#202529]"
+          class="rounded-2xl shadow-2xl shadow-black/30 mx-auto w-full max-w-4xl h-auto object-cover border-4 border-[#202529]"
           onerror="this.onerror=null;this.src='https://placehold.co/1000x500/17191A/facc15?text=Video+de+Introdução+TDF+Pro';">
       </div>
+
+      <a href="#oferta" class="cta-button">
+        <i data-feather="zap" class="mr-3"></i>
+        QUERO GARANTIR MINHA VAGA
+      </a>
+      <p class="mt-4 text-sm text-gray-500">Vagas limitadas para o próximo grupo!</p>
     </div>
   </main>
 
-  <!-- SEÇÃO SOBRE A MENTORIA (TDF PRO) -->
-  <section id="sobre" class="py-20 bg-[#17191A]">
+  <!-- PARA QUEM É A MENTORIA? -->
+  <section class="py-16 md:py-24 bg-[#17191A]">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl md:text-4xl font-bold text-white">O que é a <span class="text-yellow-400">TDF Pro</span>?
-        </h3>
-        <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Uma mentoria completa que desenvolve o atleta de base em
-          4 pilares fundamentais.</p>
+      <h2 class="section-title">Para quem é a Mentoria TDF Pro?</h2>
+      <div class="mt-12 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div class="card-dark">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Para o Atleta de Base</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que sonha em ser jogador profissional,
+                mas não sabe o caminho.</span></li>
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que se sente estagnado e não consegue
+                evoluir na sua escolinha ou clube.</span></li>
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que busca um diferencial para se
+                destacar em testes e avaliações.</span></li>
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que precisa de orientação para
+                desenvolver todos os aspectos de seu jogo.</span></li>
+          </ul>
+        </div>
+        <div class="card-dark">
+          <h3 class="text-2xl font-bold text-yellow-400 mb-4">Para os Pais e Responsáveis</h3>
+          <ul class="space-y-3 text-gray-300">
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que querem investir no sonho do filho,
+                mas com segurança e direção.</span></li>
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que procuram um acompanhamento
+                profissional que vai além do treino básico.</span></li>
+            <li class="flex items-start"><i data-feather="check"
+                class="h-6 w-6 text-yellow-400 mr-3 mt-1 flex-shrink-0"></i><span>Que desejam ver o filho mais
+                confiante, disciplinado e preparado.</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-md hover:shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300">
-          <div class="bg-yellow-400/10 text-yellow-400 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-            <i data-feather="target" class="h-8 w-8"></i>
-          </div>
+    </div>
+  </section>
+
+  <!-- O QUE VOCÊ VAI TER ACESSO -->
+  <section class="py-16 md:py-24 bg-gradient-dark">
+    <div class="container mx-auto px-6">
+      <h2 class="section-title">O que você terá acesso na Mentoria</h2>
+      <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card-feature">
+          <i data-feather="target" class="h-10 w-10 text-yellow-400 mb-4"></i>
           <h4 class="text-xl font-bold mb-2 text-white">Pilar Técnico</h4>
-          <p class="text-gray-400">Aprimoramento de fundamentos: passe, drible, finalização e controle de bola com
-            treinos específicos e análises de vídeo.</p>
+          <p class="text-gray-400">Aprimoramento de fundamentos: passe, drible, finalização e controle de bola.</p>
         </div>
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-md hover:shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300">
-          <div class="bg-yellow-400/10 text-yellow-400 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-            <i data-feather="map" class="h-8 w-8"></i>
-          </div>
+        <div class="card-feature">
+          <i data-feather="map" class="h-10 w-10 text-yellow-400 mb-4"></i>
           <h4 class="text-xl font-bold mb-2 text-white">Pilar Tático</h4>
-          <p class="text-gray-400">Desenvolva sua inteligência de jogo. Aprenda sobre posicionamento, leitura de jogo e
-            tomada de decisão rápida.</p>
+          <p class="text-gray-400">Inteligência, posicionamento e tomada de decisão rápida em campo.</p>
         </div>
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-md hover:shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300">
-          <div class="bg-yellow-400/10 text-yellow-400 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-            <i data-feather="activity" class="h-8 w-8"></i>
-          </div>
+        <div class="card-feature">
+          <i data-feather="activity" class="h-10 w-10 text-yellow-400 mb-4"></i>
           <h4 class="text-xl font-bold mb-2 text-white">Pilar Físico</h4>
-          <p class="text-gray-400">Planilhas de treino personalizadas para ganho de força, velocidade, agilidade e
-            prevenção de lesões.</p>
+          <p class="text-gray-400">Planilhas de treino personalizadas para força, velocidade e agilidade.</p>
         </div>
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-md hover:shadow-lg hover:shadow-yellow-400/40 hover:-translate-y-2 transition-all duration-300">
-          <div class="bg-yellow-400/10 text-yellow-400 rounded-full h-16 w-16 flex items-center justify-center mb-6">
-            <i data-feather="zap" class="h-8 w-8"></i>
-          </div>
+        <div class="card-feature">
+          <i data-feather="zap" class="h-10 w-10 text-yellow-400 mb-4"></i>
           <h4 class="text-xl font-bold mb-2 text-white">Pilar Mental</h4>
-          <p class="text-gray-400">Construa uma mentalidade vencedora. Trabalhe foco, resiliência, confiança e gestão de
-            pressão.</p>
+          <p class="text-gray-400">Construção de uma mentalidade vencedora, com foco e resiliência.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SEÇÃO RESULTADOS -->
-  <section id="resultados" class="py-20 bg-gradient-dark">
+  <!-- FEEDBACKS -->
+  <section id="feedbacks" class="py-16 md:py-24 bg-[#17191A]">
     <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl md:text-4xl font-bold text-white">Resultados que <span class="text-yellow-400">Falam por
-            Si</span></h3>
-        <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Veja a evolução real de atletas que passaram pela
-          mentoria TDF Pro.</p>
-      </div>
-      <div class="grid md:grid-cols-2 gap-8 items-center">
-        <div>
-          <img src="https://placehold.co/600x400/202529/fde047?text=Atleta+em+Destaque"
-            alt="Foto de um atleta da mentoria" class="rounded-xl shadow-lg border-2 border-[#202529]">
-        </div>
-        <div class="space-y-6">
-          <div class="bg-[#202529] p-6 rounded-lg shadow-md flex items-start">
-            <i data-feather="trending-up" class="h-8 w-8 text-yellow-400 mr-4 mt-1 flex-shrink-0"></i>
-            <div>
-              <h4 class="font-bold text-lg text-white">Evolução em 3 Meses</h4>
-              <p class="text-gray-400">"Meu filho, João, melhorou a finalização em 40% e ganhou muito mais confiança em
-                campo após o início da mentoria." - Ricardo, pai do atleta.</p>
-            </div>
-          </div>
-          <div class="bg-[#202529] p-6 rounded-lg shadow-md flex items-start">
-            <i data-feather="award" class="h-8 w-8 text-yellow-400 mr-4 mt-1 flex-shrink-0"></i>
-            <div>
-              <h4 class="font-bold text-lg text-white">Aprovação em Avaliação</h4>
-              <p class="text-gray-400">"Com a orientação da TDF Pro, consegui passar na avaliação de um grande clube. A
-                preparação tática e mental foi o diferencial." - Lucas, atleta.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SEÇÃO FEEDBACKS -->
-  <section id="feedbacks" class="py-20 bg-[#17191A]">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl md:text-4xl font-bold text-white">O que <span class="text-yellow-400">Dizem Sobre Nós</span>
-        </h3>
-        <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">A opinião de quem confia no nosso trabalho.</p>
-      </div>
-      <div class="grid lg:grid-cols-3 gap-8">
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-gray-800 hover:shadow-lg hover:shadow-yellow-400/40">
+      <h2 class="section-title">Resultados que falam por si</h2>
+      <div class="mt-12 grid lg:grid-cols-3 gap-8">
+        <div class="card-feedback">
           <p class="text-gray-400 mb-6">"A TDF Pro mudou a forma como meu filho enxerga o futebol. Ele está mais
             disciplinado, focado e evoluindo a cada dia. O suporte é incrível!"</p>
           <div class="flex items-center">
-            <img src="https://placehold.co/50x50/202529/fde047?text=Pai" alt="Foto do responsável"
+            <img src="https://placehold.co/50x50/202529/fde047?text=P" alt="Foto do responsável"
               class="w-12 h-12 rounded-full mr-4 border-2 border-yellow-400">
             <div>
               <p class="font-bold text-white">Marcos Almeida</p>
-              <p class="text-sm text-gray-500">Pai do Atleta Pedro</p>
+              <p class="text-sm text-yellow-400">Pai do Atleta Pedro</p>
             </div>
           </div>
         </div>
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-gray-800 hover:shadow-lg hover:shadow-yellow-400/40">
+        <div class="card-feedback">
           <p class="text-gray-400 mb-6">"Nunca imaginei que teria um acompanhamento tão profissional. As análises de
             vídeo são o ponto alto, consigo ver exatamente onde preciso melhorar."</p>
           <div class="flex items-center">
-            <img src="https://placehold.co/50x50/202529/fde047?text=Atleta" alt="Foto do atleta"
+            <img src="https://placehold.co/50x50/202529/fde047?text=A" alt="Foto do atleta"
               class="w-12 h-12 rounded-full mr-4 border-2 border-yellow-400">
             <div>
               <p class="font-bold text-white">Gabriel Costa</p>
-              <p class="text-sm text-gray-500">Atleta Sub-17</p>
+              <p class="text-sm text-yellow-400">Atleta Sub-17</p>
             </div>
           </div>
         </div>
-        <div
-          class="bg-[#202529] p-8 rounded-xl shadow-lg transform hover:-translate-y-2 transition-all duration-300 border border-gray-800 hover:shadow-lg hover:shadow-yellow-400/40">
+        <div class="card-feedback">
           <p class="text-gray-400 mb-6">"O investimento que mais valeu a pena. A evolução é nítida não só dentro de
             campo, mas também na postura e responsabilidade."</p>
           <div class="flex items-center">
-            <img src="https://placehold.co/50x50/202529/fde047?text=Mãe" alt="Foto da responsável"
+            <img src="https://placehold.co/50x50/202529/fde047?text=M" alt="Foto da responsável"
               class="w-12 h-12 rounded-full mr-4 border-2 border-yellow-400">
             <div>
               <p class="font-bold text-white">Juliana Ribeiro</p>
-              <p class="text-sm text-gray-500">Mãe da Atleta Sofia</p>
+              <p class="text-sm text-yellow-400">Mãe da Atleta Sofia</p>
             </div>
           </div>
         </div>
@@ -219,24 +170,20 @@
     </div>
   </section>
 
-  <!-- SEÇÃO VALORES -->
-  <section id="valores" class="py-20 bg-gradient-dark">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl md:text-4xl font-bold text-white">Invista na sua <span
-            class="text-yellow-400">Carreira</span></h3>
-        <p class="mt-4 text-lg text-gray-400 max-w-3xl mx-auto">Planos flexíveis para um acompanhamento profissional e
-          contínuo.</p>
-      </div>
+  <!-- SEÇÃO DE OFERTA -->
+  <section id="oferta" class="py-16 md:py-24 bg-gradient-dark">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-white">Faça sua inscrição na <span
+          class="text-yellow-400">Mentoria TDF Pro</span></h2>
       <div
-        class="max-w-md mx-auto bg-[#202529] rounded-2xl shadow-2xl shadow-black/40 p-8 lg:p-10 border-2 border-yellow-400">
-        <h4 class="text-2xl font-bold text-center text-white">Plano TDF Pro</h4>
-        <p class="text-center text-gray-400 mt-2">Mentoria Completa</p>
+        class="max-w-2xl mx-auto bg-[#202529] rounded-2xl shadow-2xl shadow-black/40 p-8 md:p-10 border-2 border-yellow-400 mt-10">
+        <h4 class="text-2xl font-bold text-center text-white">Plano TDF Pro Completo</h4>
         <div class="text-center my-8">
-          <span class="text-5xl font-extrabold text-white">R$ 297</span>
+          <p class="text-gray-400 line-through">De R$ 497</p>
+          <span class="text-5xl font-extrabold text-white">Por R$ 297</span>
           <span class="text-lg text-gray-400">/mês</span>
         </div>
-        <ul class="space-y-4 text-gray-300">
+        <ul class="space-y-4 text-gray-300 text-left">
           <li class="flex items-center"><i data-feather="check-circle"
               class="h-5 w-5 text-yellow-400 mr-3"></i>Acompanhamento individualizado</li>
           <li class="flex items-center"><i data-feather="check-circle" class="h-5 w-5 text-yellow-400 mr-3"></i>Análise
@@ -247,77 +194,120 @@
             de mentoria mental</li>
           <li class="flex items-center"><i data-feather="check-circle" class="h-5 w-5 text-yellow-400 mr-3"></i>Suporte
             direto via WhatsApp</li>
+          <li class="flex items-center font-bold text-yellow-400"><i data-feather="gift" class="h-5 w-5 mr-3"></i>BÔNUS:
+            Grupo exclusivo de atletas</li>
         </ul>
         <div class="mt-10">
-          <a href="https://wa.me/55SEUNUMERO?text=Olá!%20Tenho%20interesse%20no%20Plano%20TDF%20Pro.%20Poderia%20me%20passar%20mais%20detalhes%3F"
-            target="_blank"
-            class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full shadow-lg shadow-yellow-400/30 text-lg transition-transform transform hover:scale-105 inline-flex items-center justify-center">
-            TENHO INTERESSE
+          <a href="https://wa.me/55SEUNUMERO?text=Olá!%20Quero%20garantir%20minha%20vaga%20na%20Mentoria%20TDF%20Pro."
+            target="_blank" class="cta-button">
+            <i data-feather="zap" class="mr-3"></i>
+            QUERO GARANTIR MINHA VAGA
           </a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FAQ -->
+  <section class="py-16 md:py-24 bg-[#17191A]">
+    <div class="container mx-auto px-6 max-w-4xl">
+      <h2 class="section-title">Perguntas Frequentes</h2>
+      <div class="mt-12 space-y-4">
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Para qual idade é a mentoria?</span>
+            <i data-feather="chevron-down" class="transition-transform"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Nossa mentoria é focada em atletas de 12 a 19 anos, que estão na fase de transição da base para o
+              profissional e buscam um desenvolvimento acelerado.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Como funciona o acompanhamento?</span>
+            <i data-feather="chevron-down" class="transition-transform"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O acompanhamento é contínuo e personalizado. Envolve análises de vídeos que você nos envia, planilhas de
+              treinos individuais, sessões de mentoria online e um canal de suporte direto para tirar dúvidas.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Preciso de algum equipamento especial?</span>
+            <i data-feather="chevron-down" class="transition-transform"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Não. A maior parte do trabalho pode ser feita com equipamentos básicos que você já tem (bola, cones,
+              etc.). O mais importante é um celular para gravar seus jogos e treinos para as análises.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>E se eu quiser cancelar?</span>
+            <i data-feather="chevron-down" class="transition-transform"></i>
+          </button>
+          <div class="faq-answer">
+            <p>O plano é mensal e você pode cancelar a qualquer momento, sem taxas ou multas. Nosso compromisso é com a
+              sua evolução e satisfação.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- RODAPÉ -->
-  <footer class="bg-[#17191A] text-white py-12">
+  <footer class="bg-black text-white py-12">
     <div class="container mx-auto px-6 text-center">
       <img
-        src="https://storage.googleapis.com/maker-studio-project-files-prod/uploaded:image.png-896241ec-d0ea-4b07-abcd-619b6167ff5c"
+        src="src/images/Logotipo_page-0001.png"
         alt="Logo TDF Pro" class="h-12 mx-auto mb-4">
       <p class="mt-4 max-w-lg mx-auto text-gray-400">Transformando potencial em realidade no futebol de base.</p>
-      <div class="mt-8">
-        <a href="https://wa.me/55SEUNUMERO?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informações."
-          target="_blank"
-          class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center">
-          <i data-feather="whatsapp" class="mr-2"></i>
-          Fale Conosco
-        </a>
-      </div>
       <div class="mt-8 border-t border-gray-800 pt-8">
         <p class="text-gray-500">&copy; <span id="year"></span> TDF Pro. Todos os direitos reservados.</p>
-        <p class="text-sm text-gray-600 mt-2">Desenvolvido como proposta por um profissional de IA.</p>
       </div>
     </div>
   </footer>
 
   <!-- Código JavaScript incorporado -->
   <script>
-    // Aguarda o conteúdo da página carregar completamente antes de executar o script
     document.addEventListener('DOMContentLoaded', (event) => {
-
-      // Ativa e substitui as tags <i> com os ícones da biblioteca Feather Icons
       feather.replace();
 
-      // Atualiza o ano no rodapé para o ano corrente automaticamente
-      // Isso evita ter que mudar o ano manualmente todo dia 1º de Janeiro
       const yearElement = document.getElementById('year');
       if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
       }
 
-      // Lógica para a animação de "fade-in" dos elementos ao rolar a página
-      // Cria um 'observador' que vigia quando um elemento entra na tela
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          // Se o elemento está visível na tela
           if (entry.isIntersecting) {
-            // Adiciona a classe 'fade-in' para ativar a animação CSS
             entry.target.classList.add('fade-in');
-            // Para de observar o elemento para não repetir a animação
             observer.unobserve(entry.target);
           }
         });
-      }, {
-        // A animação começa quando 10% do elemento estiver visível
-        threshold: 0.1
-      });
+      }, { threshold: 0.1 });
 
-      // Seleciona todos os elementos que devem ter a animação e manda o observador vigiá-los
-      document.querySelectorAll('section > div, main > div').forEach(el => {
+      document.querySelectorAll('.fade-in, .section-title, .card-dark, .card-feature, .card-feedback, .faq-item').forEach(el => {
         observer.observe(el);
       });
 
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      faqQuestions.forEach(button => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+          const icon = button.querySelector('i');
+
+          if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            icon.style.transform = 'rotate(0deg)';
+          } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            icon.style.transform = 'rotate(180deg)';
+          }
+        });
+      });
     });
   </script>
 </body>

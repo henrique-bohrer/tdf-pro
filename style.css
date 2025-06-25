@@ -10,33 +10,121 @@ body {
   background-image: radial-gradient(circle at top left, #202529, #17191A 40%);
 }
 
-#navbar {
-  align-items: center;
-}
-
-/* Animação de entrada suave */
+/* Animações de entrada */
 @keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(20px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .fade-in {
+  opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Adiciona um atraso na animação para elementos em sequência */
-.fade-in-delay-1 {
-  animation-delay: 0.2s;
+.fade-in-delay-1 { animation-delay: 0.2s; }
+.fade-in-delay-2 { animation-delay: 0.4s; }
+.fade-in-delay-3 { animation-delay: 0.6s; }
+
+
+/* Estilos de Componentes Reutilizáveis */
+.section-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 800;     /* font-extrabold */
+  text-align: center;   /* text-center */
+  color: #fff;          /* text-white */
 }
-.fade-in-delay-2 {
-  animation-delay: 0.4s;
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem; /* md:text-4xl */
+  }
 }
-.fade-in-delay-3 {
-  animation-delay: 0.6s;
+
+.cta-button {
+  background-color: #facc15; /* bg-yellow-400 */
+  color: #000;               /* text-black */
+  font-weight: bold;         /* font-bold */
+  padding: 1rem 2rem;        /* py-4 px-8 */
+  border-radius: 9999px;     /* rounded-full */
+  box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.2); /* shadow-lg shadow-yellow-400/20 */
+  font-size: 1.125rem;       /* text-lg */
+  transition: all 0.3s;
+  display: inline-flex;      /* inline-flex */
+  align-items: center;       /* items-center */
+  justify-content: center;   /* justify-center */
+  width: 100%;               /* w-full */
+  max-width: 28rem;          /* max-w-md */
+  margin-left: auto;         /* mx-auto */
+  margin-right: auto;
+  transform: scale(1);
+}
+
+.cta-button:hover {
+  background-color: #fde047; /* hover:bg-yellow-500 */
+  transform: scale(1.05);    /* hover:scale-105 */
+}
+
+.card-dark {
+  background-color: #202529; /* bg-[#202529] */
+  padding: 2rem;             /* p-8 */
+  border-radius: 0.75rem;    /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); /* shadow-lg */
+  border: 1px solid #1f2937; /* border-gray-800 */
+}
+
+.card-feature {
+  background-color: #202529; /* bg-[#202529] */
+  padding: 1.5rem;           /* p-6 */
+  border-radius: 0.75rem;    /* rounded-xl */
+  text-align: center;        /* text-center */
+  transition: transform 0.2s;
+  transform: translateY(0);
+}
+
+.card-feature:hover {
+  transform: translateY(-0.5rem); /* hover:-translate-y-2 */
+}
+
+.card-feedback {
+  background-color: #202529; /* bg-[#202529] */
+  padding: 2rem;             /* p-8 */
+  border-radius: 0.75rem;    /* rounded-xl */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); /* shadow-lg */
+  border: 1px solid #1f2937; /* border-gray-800 */
+}
+
+/* Estilos para o Acordeão do FAQ */
+.faq-item {
+  background-color: #202529; /* bg-[#202529] */
+  border-radius: 0.5rem;     /* rounded-lg */
+  border: 1px solid #1f2937; /* border-gray-800 */
+}
+
+.faq-question {
+  width: 100%;               /* w-full */
+  display: flex;             /* flex */
+  justify-content: space-between; /* justify-between */
+  align-items: center;       /* items-center */
+  text-align: left;          /* text-left */
+  padding: 1.5rem;           /* p-6 */
+  font-weight: bold;         /* font-bold */
+  font-size: 1.125rem;       /* text-lg */
+  color: #fff;               /* text-white */
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: #facc15;            /* hover:text-yellow-400 */
+}
+
+.faq-answer {
+  overflow: hidden;          /* overflow-hidden */
+  max-height: 0;             /* max-h-0 */
+  transition: all 0.5s ease-in-out; /* transition-all duration-500 ease-in-out */
+}
+
+.faq-answer p {
+  padding: 1.5rem;           /* p-6 */
+  padding-top: 0;            /* pt-0 */
+  color: #9ca3af;            /* text-gray-400 */
 }
