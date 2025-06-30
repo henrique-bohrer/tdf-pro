@@ -16,6 +16,18 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Animação de pulso para o botão do WhatsApp */
+@keyframes pulse {
+  0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+
 .fade-in {
   opacity: 0;
   animation: fadeIn 0.8s ease-out forwards;
@@ -28,103 +40,133 @@ body {
 
 /* Estilos de Componentes Reutilizáveis */
 .section-title {
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: 800;     /* font-extrabold */
-  text-align: center;   /* text-center */
-  color: #fff;          /* text-white */
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
 }
 
 @media (min-width: 768px) {
   .section-title {
-    font-size: 2.25rem; /* md:text-4xl */
+    font-size: 2.25rem; /* 36px */
+    line-height: 2.5rem; /* 40px */
   }
 }
 
+.section-title {
+  font-weight: 800; /* extra bold */
+  text-align: center;
+  color: white;
+}
+
 .cta-button {
-  background-color: #facc15; /* bg-yellow-400 */
-  color: #000;               /* text-black */
-  font-weight: bold;         /* font-bold */
-  padding: 1rem 2rem;        /* py-4 px-8 */
-  border-radius: 9999px;     /* rounded-full */
-  box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.2); /* shadow-lg shadow-yellow-400/20 */
-  font-size: 1.125rem;       /* text-lg */
-  transition: all 0.3s;
-  display: inline-flex;      /* inline-flex */
-  align-items: center;       /* items-center */
-  justify-content: center;   /* justify-center */
-  width: 100%;               /* w-full */
-  max-width: 28rem;          /* max-w-md */
-  margin-left: auto;         /* mx-auto */
-  margin-right: auto;
+  background-color: #facc15; /* yellow-400 */
+  color: black;
+  font-weight: bold;
+  padding-top: 1rem; /* 16px */
+  padding-bottom: 1rem;
+  padding-left: 2rem; /* 32px */
+  padding-right: 2rem; /* 32px */
+  border-radius: 9999px; /* rounded-full */
+  box-shadow: 0 10px 15px -3px rgba(250, 204, 21, 0.2), 0 4px 6px -2px rgba(250, 204, 21, 0.1); /* shadow-lg shadow-yellow-400/20 */
+  font-size: 1.25rem; /* 18px */
+  line-height: 1.75rem; /* 20px */
+  transition: all 0.3s ease-in-out;
   transform: scale(1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 28rem; /* 448px */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-button:hover {
-  background-color: #fde047; /* hover:bg-yellow-500 */
-  transform: scale(1.05);    /* hover:scale-105 */
+    background-color: #fde047;
+    transform: scale(1.05);
 }
 
 .card-dark {
-  background-color: #202529; /* bg-[#202529] */
-  padding: 2rem;             /* p-8 */
-  border-radius: 0.75rem;    /* rounded-xl */
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); /* shadow-lg */
-  border: 1px solid #1f2937; /* border-gray-800 */
+  background-color: #202529;
+  padding: 2rem; /* 32px */
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border: 1px solid #4b5563; /* gray-800 */
 }
 
 .card-feature {
-  background-color: #202529; /* bg-[#202529] */
-  padding: 1.5rem;           /* p-6 */
-  border-radius: 0.75rem;    /* rounded-xl */
-  text-align: center;        /* text-center */
-  transition: transform 0.2s;
+  background-color: #202529;
+  padding: 1.5rem; /* 24px */
+  border-radius: 0.75rem; /* 12px */
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
   transform: translateY(0);
 }
 
 .card-feature:hover {
-  transform: translateY(-0.5rem); /* hover:-translate-y-2 */
+    transform: translateY(-0.5rem);
 }
 
 .card-feedback {
-  background-color: #202529; /* bg-[#202529] */
-  padding: 2rem;             /* p-8 */
-  border-radius: 0.75rem;    /* rounded-xl */
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5); /* shadow-lg */
-  border: 1px solid #1f2937; /* border-gray-800 */
+  background-color: #202529;
+  padding: 2rem; /* 32px */
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  border: 1px solid #4b5563; /* gray-800 */
 }
 
 /* Estilos para o Acordeão do FAQ */
 .faq-item {
-  background-color: #202529; /* bg-[#202529] */
-  border-radius: 0.5rem;     /* rounded-lg */
-  border: 1px solid #1f2937; /* border-gray-800 */
+  background-color: #202529;
+  border-radius: 0.5rem; /* 8px */
+  border: 1px solid #4b5563; /* gray-800 */
 }
 
 .faq-question {
-  width: 100%;               /* w-full */
-  display: flex;             /* flex */
-  justify-content: space-between; /* justify-between */
-  align-items: center;       /* items-center */
-  text-align: left;          /* text-left */
-  padding: 1.5rem;           /* p-6 */
-  font-weight: bold;         /* font-bold */
-  font-size: 1.125rem;       /* text-lg */
-  color: #fff;               /* text-white */
-  transition: color 0.2s;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  padding: 1.5rem; /* 24px */
+  font-weight: bold;
+  font-size: 1.25rem; /* 18px */
+  line-height: 1.75rem; /* 20px */
+  color: white;
+  transition: color 0.3s ease-in-out;
 }
 
 .faq-question:hover {
-  color: #facc15;            /* hover:text-yellow-400 */
+    color: #facc15;
 }
 
 .faq-answer {
-  overflow: hidden;          /* overflow-hidden */
-  max-height: 0;             /* max-h-0 */
-  transition: all 0.5s ease-in-out; /* transition-all duration-500 ease-in-out */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
 }
 
 .faq-answer p {
-  padding: 1.5rem;           /* p-6 */
-  padding-top: 0;            /* pt-0 */
-  color: #9ca3af;            /* text-gray-400 */
+  padding: 1.5rem;
+  padding-top: 0;
+  color: #9ca3af; /* gray-400 */
+}
+
+/* Estilo para o balão flutuante do WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.5rem; /* 24px */
+  right: 1.5rem; /* 24px */
+  background-color: #22c55e; /* green-500 */
+  color: white;
+  width: 4rem; /* 64px */
+  height: 4rem; /* 64px */
+  border-radius: 9999px; /* rounded-full */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-lg */
+  z-index: 50;
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+  animation: pulse 2s infinite;
 }
