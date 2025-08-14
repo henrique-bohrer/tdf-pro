@@ -1,36 +1,43 @@
-// Aguarda o conteúdo da página carregar completamente antes de executar o script
 document.addEventListener('DOMContentLoaded', (event) => {
-
-  // Ativa e substitui as tags <i> com os ícones da biblioteca Feather Icons
+  // Inicializa os ícones da biblioteca Feather Icons.
   feather.replace();
 
-  // Atualiza o ano no rodapé para o ano corrente automaticamente
-  // Isso evita ter que mudar o ano manualmente todo dia 1º de Janeiro
+  // Define o ano atual no rodapé.
   const yearElement = document.getElementById('year');
   if (yearElement) {
-      yearElement.textContent = new Date().getFullYear();
+    yearElement.textContent = new Date().getFullYear();
   }
 
-  // Lógica para a animação de "fade-in" dos elementos ao rolar a página
-  // Cria um 'observador' que vigia quando um elemento entra na tela
+  // Configura a animação de fade-in para elementos quando eles entram na tela.
   const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-          // Se o elemento está visível na tela
-          if (entry.isIntersecting) {
-              // Adiciona a classe 'fade-in' para ativar a animação CSS
-              entry.target.classList.add('fade-in');
-              // Para de observar o elemento para não repetir a animação
-              observer.unobserve(entry.target);
-          }
-      });
-  }, {
-      // A animação começa quando 10% do elemento estiver visível
-      threshold: 0.1
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // Aplica o observador a todos os elementos com a classe 'fade-in-on-scroll'.
+  document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
+    observer.observe(el);
   });
 
-  // Seleciona todos os elementos que devem ter a animação e manda o observador vigiá-los
-  document.querySelectorAll('section > div, main > div').forEach(el => {
-      observer.observe(el);
-  });
+  // Controla a funcionalidade de acordeão (abrir/fechar) para a seção de FAQ.
+  const faqQuestions = document.querySelectorAll('.faq-question');
+  faqQuestions.forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const icon = button.querySelector('i');
 
+      // Alterna a visibilidade da resposta.
+      if (answer.style.maxHeight) {
+        answer.style.maxHeight = null;
+        icon.style.transform = 'rotate(0deg)';
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        icon.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
 });
