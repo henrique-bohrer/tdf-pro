@@ -96,7 +96,4 @@ Desenvolvido por **Henrique Bohrer**
 ---
 
 ## 📝 Licença
-
-Este projeto está licenciado sob a **MIT License**. Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE).
-
 ---
