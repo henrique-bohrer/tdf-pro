@@ -48,23 +48,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   if (contactForm && popup && popupClose) {
     contactForm.addEventListener('submit', function(event) {
-      event.preventDefault(); // Impede o envio padrão do formulário.
+      event.preventDefault();
 
-      const formData = new FormData(contactForm);
-      const status = document.createElement('p'); // Elemento para feedback
+      const data = {
+        name: contactForm.elements.name.value,
+        email: contactForm.elements.email.value,
+        phone: contactForm.elements.phone.value,
+        message: contactForm.elements.message.value,
+      };
+
+      const status = document.createElement('p');
+      status.style.color = 'red';
+      status.style.textAlign = 'center';
+      status.style.marginTop = '1rem';
 
       fetch(contactForm.action, {
-        method: contactForm.method,
-        body: formData,
+        method: 'POST',
+        body: JSON.stringify(data),
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'application/json'
         }
       }).then(response => {
         if (response.ok) {
-          // Exibe o pop-up
           popup.classList.add('is-visible');
-          feather.replace(); // Re-renderiza os ícones do Feather, incluindo o do pop-up.
-          contactForm.reset(); // Limpa o formulário.
+          feather.replace();
+          contactForm.reset();
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
@@ -81,13 +90,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
       });
     });
 
-    // Fecha o pop-up
     const closePopup = () => {
       popup.classList.remove('is-visible');
     };
 
     popupClose.addEventListener('click', closePopup);
-    // Fecha também se clicar fora do conteúdo do pop-up
     popup.addEventListener('click', (event) => {
       if (event.target === popup) {
         closePopup();
