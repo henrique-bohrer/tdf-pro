@@ -173,7 +173,7 @@
         class="max-w-2xl mx-auto bg-[#202529] rounded-2xl shadow-2xl shadow-black/40 p-8 md:p-10 border-2 border-yellow-400 mt-10">
         <div class="text-left">
           <h3 class="text-xl font-bold text-white mb-4 text-center">Ficou com alguma dúvida? <br>Entre em contato!</h3>
-          <form action="https://formspree.io/f/suporte@trilhadofutebol.com.br" method="POST" class="space-y-4">
+          <form id="contact-form" action="https://formspree.io/f/mqalojvp" method="POST" class="space-y-4">
             <div>
               <label for="name" class="sr-only">Nome</label>
               <input type="text" name="name" id="name" placeholder="Seu nome" required class="form-input">
@@ -183,11 +183,15 @@
               <input type="email" name="email" id="email" placeholder="Seu e-mail" required class="form-input">
             </div>
             <div>
+              <label for="phone" class="sr-only">Telefone</label>
+              <input type="tel" name="phone" id="phone" placeholder="Seu telefone (opcional)" class="form-input">
+            </div>
+            <div>
               <label for="message" class="sr-only">Mensagem</label>
               <textarea name="message" id="message" rows="4" placeholder="Sua mensagem" required
                 class="form-input"></textarea>
             </div>
-            <div>
+            <div class="text-center">
               <button type="submit" class="cta-button">Enviar Mensagem</button>
             </div>
           </form>
@@ -250,6 +254,16 @@
 
   <!-- Script customizado -->
   <script src="script.js"></script>
+
+  <!-- Pop-up de Confirmação -->
+  <div id="popup-modal" class="popup-overlay">
+    <div class="popup-content">
+      <button id="popup-close" class="popup-close-button">&times;</button>
+      <i data-feather="check-circle" class="popup-icon"></i>
+      <h3 class="popup-title">Enviado com Sucesso!</h3>
+      <p>Seu contato foi enviado para a nossa área de vendas. <br>Agradecemos a sua mensagem!</p>
+    </div>
+  </div>
 </body>
 
 </html>
