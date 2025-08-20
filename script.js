@@ -40,4 +40,65 @@ document.addEventListener('DOMContentLoaded', (event) => {
       }
     });
   });
+
+  // Controla o envio do formulário de contato e o pop-up de confirmação.
+  const contactForm = document.getElementById('contact-form');
+  const popup = document.getElementById('popup-modal');
+  const popupClose = document.getElementById('popup-close');
+
+  if (contactForm && popup && popupClose) {
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const data = {
+        name: contactForm.elements.name.value,
+        email: contactForm.elements.email.value,
+        phone: contactForm.elements.phone.value,
+        message: contactForm.elements.message.value,
+      };
+
+      const status = document.createElement('p');
+      status.style.color = 'red';
+      status.style.textAlign = 'center';
+      status.style.marginTop = '1rem';
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          popup.classList.add('is-visible');
+          feather.replace();
+          contactForm.reset();
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.textContent = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              status.textContent = "Oops! Ocorreu um problema ao enviar seu formulário.";
+            }
+            contactForm.appendChild(status);
+          })
+        }
+      }).catch(error => {
+        status.textContent = "Oops! Ocorreu um problema ao enviar seu formulário.";
+        contactForm.appendChild(status);
+      });
+    });
+
+    const closePopup = () => {
+      popup.classList.remove('is-visible');
+    };
+
+    popupClose.addEventListener('click', closePopup);
+    popup.addEventListener('click', (event) => {
+      if (event.target === popup) {
+        closePopup();
+      }
+    });
+  }
 });
